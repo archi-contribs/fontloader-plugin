@@ -23,6 +23,7 @@ import org.osgi.framework.BundleContext;
  * 
  * @author JB Sarrodie
  */
+@SuppressWarnings("nls")
 public class FontLoaderPlugin extends AbstractUIPlugin {
 	public static final String PLUGIN_ID = "org.archicontribs.fontloader"; //$NON-NLS-1$
 	
@@ -37,20 +38,21 @@ public class FontLoaderPlugin extends AbstractUIPlugin {
     
     @Override
     public void start(BundleContext context) throws Exception {
-    	System.out.println("Plugin is being activated from Activator");
         super.start(context);
-        Display display = Display.getDefault();
-        if(display == null)
-        	System.out.println("Display is null");
-        else
-        	display.loadFont("/tmp/fonts/Archi-FontAwesome.ttf");
+        
+        final String fontPath = "/tmp/fonts/Archi-FontAwesome.ttf";
+        
+        Display.getDefault().asyncExec(() -> {
+            boolean success = Display.getDefault().loadFont(fontPath);
+            System.out.println(success ? "loaded" : "not loaded");
+        });
     }
     
     /**
      * @return The File Location of this plugin
      */
     public File getPluginFolder() {
-        URL url = getBundle().getEntry("/"); //$NON-NLS-1$
+        URL url = getBundle().getEntry("/");
         try {
             url = FileLocator.resolve(url);
         }
