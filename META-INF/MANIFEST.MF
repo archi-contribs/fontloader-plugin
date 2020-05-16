@@ -1,15 +1,14 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: %Bundle-Name
+Bundle-Name: Font Loader
 Bundle-SymbolicName: org.archicontribs.fontloader;singleton:=true
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: 0.1.0.qualifier
 Automatic-Module-Name: org.archicontribs.fontloader
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Bundle-Vendor: Phillip Beauvoir & Jean-Baptiste Sarrodie
-Require-Bundle: org.eclipse.core.runtime;bundle-version="3.16.0",
- org.eclipse.swt,
- org.eclipse.ui.workbench,
- org.eclipse.ui
+Bundle-Vendor: Jean-Baptiste Sarrodie & Phillip Beauvoir
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime
 Bundle-Activator: org.archicontribs.fontloader.FontLoaderPlugin
 Bundle-ActivationPolicy: lazy
 Import-Package: com.archimatetool.editor.preferences
+Bundle-ClassPath: org.archicontribs.fontloader.jar
