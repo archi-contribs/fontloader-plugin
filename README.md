@@ -1,7 +1,7 @@
 ## Font Loader plugin for Archi
 
 This plugin allows you to make some fonts available to Archi without having to install them in your OS.
-This is especially useful when working on some worporate workstations.
+This is especially useful when working on some corporate workstations.
 
 The plugin comes in two versions:
 - The bare plugin which will create a `fonts` folder in your `Archi4` user folder.
