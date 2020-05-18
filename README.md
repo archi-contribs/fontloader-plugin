@@ -17,6 +17,8 @@ If you want to have your own version of the plugin containing your own set of fo
 open it with an archive manager such as [7-Zip](https://www.7-zip.org/) (`.archiplugin` files are simple ZIP archives),
 and drop your fonts into the `fonts` folder that you will find inside the `org.archicontribs.fontloader_a.b.c.d`).
 
+**Note:** This plugin doesn't work on Linux
+
 Copyright (c) 2020 Phillip Beauvoir & Jean-Baptiste Sarrodie
 
 >Permission is hereby granted, free of charge, to any person
