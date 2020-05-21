@@ -12,7 +12,6 @@ import java.io.IOException;
 import java.net.URL;
 
 import org.eclipse.core.runtime.FileLocator;
-import org.eclipse.core.runtime.Path;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
@@ -79,14 +78,7 @@ public class FontLoaderPlugin extends AbstractUIPlugin {
      * @return The plugin fonts folder
      */
     public File getFontsFolder() {
-        URL url = FileLocator.find(getBundle(), new Path("$nl$/fonts"), null); //$NON-NLS-1$
-        try {
-            url = FileLocator.resolve(url);
-        }
-        catch(IOException ex) {
-            ex.printStackTrace();
-        }
-        return new File(url.getPath()); 
+        return new File(getPluginFolder(), "fonts"); //$NON-NLS-1$
     }
     
     /**
